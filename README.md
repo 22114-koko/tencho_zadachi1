@@ -1,0 +1,1 @@
+# tencho_zadachi1
