@@ -1,0 +1,12 @@
+.bg-black-custom {
+    background-color: #111111;
+}
+
+.text-gold {
+    color: #ffd700;
+}
+
+.card-img-top{
+    height: 250px;
+    object-fit: cover;
+}

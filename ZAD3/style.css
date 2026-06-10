@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+}
+
+body {
+    /* Променен фон: Дълбоко лилаво-черно с розови и виолетови сияния */
+    background-color: #08070d;
+    background-image: 
+        radial-gradient(at 5% 15%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
+        radial-gradient(at 95% 85%, rgba(139, 92, 246, 0.15) 0px, transparent 50__);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.form-container {
+    /* Контейнер в тъмен въглен с патладжанен оттенък */
+    background: #120f1d;
+    border: 1px solid #231d36;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65);
+    width: 100%;
+    max-width: 430px;
+    position: relative;
+}
+
+/* Нова горна линия: Преливане от неоново розово към лилаво */
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ec4899, #8b5cf6);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Градиентно заглавие с новите цветове */
+h2 span {
+    background: linear-gradient(90deg, #ec4899, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #94a3b8; /* Запазено неутрално сиво за баланс */
+    font-weight: 500;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 18px;
+    /* По-тъмен фон на полетата за по-силен контраст */
+    background-color: #1a162b;
+    border: 2px solid #2d2649;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+input::placeholder {
+    color: #4c4566;
+}
+
+/* Фокус ефектът сега свети в маджента/розово */
+input:focus {
+    border-color: #ec4899;
+    box-shadow: 0 0 14px rgba(236, 72, 153, 0.25);
+    background-color: #201b35;
+}
+
+/* Червен цвят за грешка (оптимизиран за лилавия фон) */
+.error-text {
+    color: #ff6b6b;
+    font-size: 13px;
+    margin-top: 7px;
+    font-weight: 500;
+}
+
+/* Меко зелено за успешен запис */
+.success-text {
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid #10b981;
+    color: #34d399;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Бутонът вече е с ярък розово-виолетов градиент */
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #ec4899 0%, #7c3aed 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(236, 72, 153, 0.2);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(236, 72, 153, 0.45);
+    filter: brightness(1.1); /* Бутонът става по-ярък при посочване */
+}
+
+button:active {
+    transform: translateY(0);
+}
